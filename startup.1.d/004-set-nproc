@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+set -eux
+
+sed -i -e "s/;nodes=/nodes=/" config/smtp.ini
+sed -i -e "s/nodes=\(.+\)/nodes=$(nproc)/" config/smtp.ini

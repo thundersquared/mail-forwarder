@@ -1,0 +1,19 @@
+{
+  "name": "sqrd-mail-forwarder",
+  "description": "An SMTP forwarding server",
+  "version": "1.0.0-alpha1",
+  "dependencies": {
+    "Haraka": "^2.8.28",
+    "toobusy-js": "^0.5.1"
+  },
+  "author": {
+    "name": "Anatoli Nicolae",
+    "email": "an@thundersquared.com",
+    "url": "https://thundersquared.com/"
+  },
+  "repository": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "haraka -c ."
+  }
+}

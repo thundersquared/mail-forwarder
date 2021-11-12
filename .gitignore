@@ -1,0 +1,10 @@
+# Don't commit config
+config/dhparams.pem
+config/host_list
+config/me
+config/tls_cert.pem
+config/tls_key.pem
+
+# Avoid node modules and dev folders
+node_modules/
+scripts/

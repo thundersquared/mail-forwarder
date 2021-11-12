@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -eux
+
+# Set self hostname in config
+if [ -n "${MY_HOSTNAME}" ]; then
+    echo "${MY_HOSTNAME}" >config/me
+fi

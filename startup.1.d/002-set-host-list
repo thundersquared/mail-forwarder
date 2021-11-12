@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -eux
+
+# Write on single line in file
+if [ -n "${MY_HOST_LIST}" ]; then
+    echo "${MY_HOST_LIST}" | sed 's/,/\r\n/g' >config/host_list
+fi

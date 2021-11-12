@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+set -eux
+
+if [ ! -f config/tls_key.pem ] || [ ! -f config/tls_cert.pem ]; then
+
+    # Create certificate non-interactively with default data
+    openssl req -x509 -nodes -batch \
+        -days 2190 -newkey rsa:2048 \
+        -subj "/C=IT/ST=Torino/L=Torino/O=thundersquared/OU=Development/CN=$(tr -d '\r\n' <config/me)/emailAddress=${MY_EMAIL}" \
+        -keyout config/tls_key.pem \
+        -out config/tls_cert.pem
+
+fi
